@@ -24,7 +24,6 @@ namespace AuthenticationMVCCsharp.Services
             };
             var token = tokenHandler.CreateToken(tokenDescriptor);
             return tokenHandler.WriteToken(token);
-
         }
 
         private static object JwtSecurityTokenHandler()
