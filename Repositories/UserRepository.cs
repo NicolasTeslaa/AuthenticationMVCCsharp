@@ -4,18 +4,12 @@ namespace AuthenticationMVCCsharp.Repositories
 {
     public static class UserRepository
     {
-        public static void User(string username, string password)
+        public static User Get(string username, string password)
         {
-            var users = new List<User>
-            {
-                new() {Id = 1, Username = "Batman", Password = "batman", Role= "Manager"},
-                new() {Id = 2, Username = "Robin", Password = "robin", Role= "Employee"},
-
-            };
-            users
-           .FirstOrDefault(x =>
-           x.Username == username
-           && x.Password == password);
+            var users = new List<User>();
+            users.Add(new User { Id = 1, Username = "batman", Password = "batman", Role = "manager" });
+            users.Add(new User { Id = 2, Username = "robin", Password = "robin", Role = "employee" });
+            return users.Where(x => x.Username.ToLower() == username.ToLower() && x.Password == x.Password).FirstOrDefault();
         }
     }
 }

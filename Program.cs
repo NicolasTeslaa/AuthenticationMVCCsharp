@@ -8,7 +8,6 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 var key = Encoding.ASCII.GetBytes(Settings.Secret);
 
-
 builder.Services.AddAuthentication(opt =>
 {
     opt.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -26,8 +25,6 @@ builder.Services.AddAuthentication(opt =>
             ValidateAudience = false
         };
     });
-
-
 
 var app = builder.Build();
 // Configure the HTTP request pipeline.
