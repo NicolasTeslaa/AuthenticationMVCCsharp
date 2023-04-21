@@ -1,5 +1,4 @@
-﻿using System.Diagnostics;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using AuthenticationMVCCsharp.Models;
 using AuthenticationMVCCsharp.Repositories;
 using AuthenticationMVCCsharp.Services;
